@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie DB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
+</head>
+<body>
+  <header>
+    <img src="assets/movielogo.png" alt="Logo" id="logo" />
+    <nav>
+      <button id="home-tab" class="tab active">HOME</button>
+      <button id="liked-tab" class="tab">LIKED LIST</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="controls">
+      <select id="category-select">
+        <option value="popular">Popular</option>
+        <option value="now_playing">Now Playing</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="upcoming">Up Coming</option>
+      </select>
+    </section>
+
+    <section id="movie-grid" class="movie-grid"></section>
+
+    <section class="pagination">
+      <button id="prev-btn" disabled>Prev</button>
+      <span id="page-info">Page 1 of ?</span>
+      <button id="next-btn">Next</button>
+    </section>
+  </main>
+
+  <div id="modal-backdrop" class="modal-backdrop hidden">
+    <div id="movie-modal" class="movie-modal">
+      <span class="close-btn">&times;</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
